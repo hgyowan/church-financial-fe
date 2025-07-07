@@ -1,68 +1,168 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(120deg, #b2e0db 0%, #e6f7f5 50%, #5dc2b8 100%);
+  color: #475569;
+  font-family: 'SUIT', 'Spoqa Han Sans Neo', 'Noto Sans Rounded', 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'SUIT', 'Spoqa Han Sans Neo', 'Noto Sans Rounded', 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: #1a7e6a;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+.app-fullscreen {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: none;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 3.5rem 1rem 2.5rem 1rem;
+  box-sizing: border-box;
+  background: none;
+}
+
+.nav-root {
+  background: #fff;
+  border-bottom: 1.5px solid #b2e0db;
+  box-shadow: none;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.nav-desktop-menu {
+  display: flex;
+}
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  margin-left: 1rem;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.nav-mobile-menu {
+  display: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.btn, button {
+  background: #1a7e6a;
+  color: #fff;
+  border-radius: 1.5rem;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.btn:hover, button:hover {
+  background: #15907a;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: none;
+  border: none;
+  padding: 2.2rem 1.7rem;
+  margin: 0.5rem 0;
+  transition: background 0.2s;
+  min-width: 210px;
+  max-width: 260px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.feature-card:hover {
+  background: #e6f7f5;
+}
+
+.footer {
+  background: #1a7e6a;
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
   }
-  a:hover {
-    color: #747bff;
+  .nav-root {
+    padding: 0.7rem 1rem;
   }
-  button {
-    background-color: #f9f9f9;
+  .nav-desktop-menu {
+    display: none;
+  }
+  .nav-hamburger {
+    display: block;
+  }
+  .nav-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #fff;
+    border-bottom: 1.5px solid #b2e0db;
+    box-shadow: 0 8px 32px rgba(30,126,106,0.07);
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    z-index: 100;
+    animation: navMenuFadeIn 0.2s;
+  }
+  .feature-card {
+    padding: 1.2rem 0.7rem;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .footer {
+    font-size: 0.93rem;
+    padding: 1rem 0;
   }
 }
+@keyframes navMenuFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: none; }
+} 

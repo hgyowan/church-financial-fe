@@ -1,0 +1,19 @@
+.btn {
+  background: #1a7e6a;
+  color: #fff;
+  border-radius: 1.5rem;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #15907a;
+}
+.secondary {
+  background: #b2e0db;
+  color: #1a7e6a;
+} 
