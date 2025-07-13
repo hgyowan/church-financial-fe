@@ -1,0 +1,142 @@
+.ledgerSection {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.searchCard {
+  margin-bottom: 0;
+  padding: 1.2rem 1.2rem;
+  background: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.searchTitle {
+  font-weight: 600;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+  color: #1a7e6a;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.searchLabel {
+  min-width: 100px;
+  max-width: 160px;
+  color: #5dc2b8;
+  font-weight: 500;
+  font-size: 1rem;
+  flex: 0 0 140px;
+  margin-bottom: 6px;
+}
+
+.searchSelect {
+  padding: 0.45rem 1.1rem;
+  border-radius: 10px;
+  border: 1.5px solid #b2e0db;
+  font-size: 1rem;
+  color: #1a7e6a;
+  background: #f8fafc;
+  font-weight: 500;
+  min-width: 200px;
+  max-width: 350px;
+  flex: 1 1 220px;
+}
+
+.dataGridContainer {
+  background: rgba(255,255,255,0.97);
+  border: 1.5px solid #e6f7f5;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(30,126,106,0.04);
+  padding: 0;
+  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
+  min-width: 0;
+}
+
+.dataGrid {
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-family: inherit;
+  color: #1a7e6a;
+  min-width: 0;
+  height: 420px;
+  min-height: 420px;
+  max-height: 420px;
+}
+
+.dataGrid :global(.MuiDataGrid-columnHeaders) {
+  background: #e6f7f5;
+  color: #1a7e6a;
+  font-weight: 700;
+  font-size: 1rem;
+  border-bottom: 1.5px solid #b2e0db;
+}
+
+.dataGrid :global(.MuiDataGrid-row) {
+  font-size: 0.98rem;
+  color: #475569;
+  background: none;
+}
+
+.dataGrid :global(.MuiDataGrid-cell) {
+  border-bottom: 1px solid #e6f7f5;
+}
+
+.dataGrid :global(.Mui-selected) {
+  background: #b2e0db !important;
+  color: #1a7e6a;
+}
+
+.dataGrid :global(.MuiDataGrid-footerContainer) {
+  background: #f8fafc;
+  border-top: 1.5px solid #b2e0db;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 700px) {
+  .ledgerSection {
+    max-width: 100vw !important;
+    padding: 0 2vw !important;
+  }
+  
+  .ledgerSection > div,
+  .ledgerSection :global(.MuiDataGrid-root) {
+    max-width: 100vw !important;
+  }
+  
+  .ledgerSection :global(.MuiDataGrid-root) {
+    font-size: 0.95rem;
+  }
+  
+  .searchForm {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  
+  .searchLabel,
+  .searchSelect {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+} 

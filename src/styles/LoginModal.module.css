@@ -1,0 +1,239 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(30, 126, 106, 0.15);
+  border: 1px solid #e6f7f5;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #1a7e6a;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.closeButton:hover {
+  background: #e6f7f5;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a7e6a;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+  color: #1a7e6a;
+  font-size: 1rem;
+}
+
+.input {
+  padding: 0.8rem 1rem;
+  border: 2px solid #b2e0db;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #1a7e6a;
+  background: #f8fafc;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1a7e6a;
+  background: #fff;
+}
+
+.input::placeholder {
+  color: #5dc2b8;
+}
+
+.loginButton {
+  background: #1a7e6a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.loginButton:hover {
+  background: #15907a;
+}
+
+.loginButton:disabled {
+  background: #b2e0db;
+  cursor: not-allowed;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #5dc2b8;
+  font-size: 0.9rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #b2e0db;
+}
+
+.divider span {
+  padding: 0 1rem;
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: #fff;
+  border: 2px solid #b2e0db;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a7e6a;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.socialButton:hover {
+  background: #e6f7f5;
+  border-color: #1a7e6a;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.emailButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: #f8fafc;
+  border: 2px solid #b2e0db;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a7e6a;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.emailButton:hover {
+  background: #e6f7f5;
+  border-color: #1a7e6a;
+}
+
+.emailIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #5dc2b8;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #1a7e6a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.success {
+  color: #27ae60;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .modal {
+    padding: 2rem 1.5rem;
+    width: 95%;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .closeButton {
+    top: 1rem;
+    right: 1rem;
+  }
+} 
